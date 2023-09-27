@@ -1,10 +1,11 @@
 import header from "./Header";
+import '../styles/RustRaidParent.css'
 
 export default function RustRaidParent() {
 
 
     return (
-        <div>
+        <div className="App">
             {header}
         </div>
     )

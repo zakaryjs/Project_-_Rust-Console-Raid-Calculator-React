@@ -1,0 +1,7 @@
+.App {
+    text-align: center;
+    background-color: #ce412d;
+    border: 5px solid black;
+    border-radius: 2px;
+    min-height: 100vh;
+}
