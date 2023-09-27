@@ -1,7 +1,7 @@
 .App {
     text-align: center;
-    background-color: #ce412d;
-    border: 5px solid black;
+    background-color: black;
+    border: 5px solid #ce412d;
     border-radius: 2px;
     min-height: 100vh;
 }
