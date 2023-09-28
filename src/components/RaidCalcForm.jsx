@@ -9,7 +9,6 @@ export default function RaidCalcForm( { onFormSubmit }) {
         onFormSubmit(rocketQuery)
         console.log(`Calculating the raid cost for ${rocketQuery} rockets...`)
         calculateRocket(rocketQuery)
-        
 
     }
 
@@ -26,6 +25,13 @@ export default function RaidCalcForm( { onFormSubmit }) {
         console.log(`The pipe cost for ${rocketValue} rockets is ${pipes} pipes.`)
         console.log(`The gunpowder cost for ${rocketValue} rockets is ${gunpowder} gunpowder.`)
         console.log(`The explosives cost for ${rocketValue} rockets is ${explosives} explosives.`)
+        let raidCost = {
+            sulphur: sulphur,
+            pipes: pipes,
+            gunpowder: gunpowder,
+            explosives: explosives
+        }
+        onFormSubmit(raidCost)
         return sulphur, pipes, gunpowder, explosives
     }
 

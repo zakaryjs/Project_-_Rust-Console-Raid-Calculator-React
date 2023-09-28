@@ -15,6 +15,10 @@ export default function RustRaidParent() {
         <div className="App">
             {header}
             <RaidCalcForm onFormSubmit={handleFormSubmit} />
+            {rocketValue && <p>Sulphur: {rocketValue.sulphur}</p>}
+            {rocketValue && <p>Pipes: {rocketValue.pipes}</p>}
+            {rocketValue && <p>Gunpowder: {rocketValue.gunpowder}</p>}
+            {rocketValue && <p>Explosives: {rocketValue.explosives}</p>}
         </div>
     )
 }
