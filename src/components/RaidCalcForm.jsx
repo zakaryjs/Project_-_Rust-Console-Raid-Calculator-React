@@ -17,19 +17,29 @@ export default function RaidCalcForm( { onFormSubmit }) {
     }
 
     function calculateRocket(rocketValue) {
-        let sulphur = (rocketValue*1400)
-        let pipes = (rocketValue*2)
-        let gunpowder = (rocketValue*150)
+        let rocketSulphur = (rocketValue*1400)
+        let rocketPipes = (rocketValue*2)
+        let rocketGunpowder = (rocketValue*150)
+        let rocketExplosives = (rocketValue*10)
+
         let explosives = (rocketValue*10)
+        let explosivesSulphur = (explosives*110)
+        let explosivesLowGrade = (explosives*3)
+        let explosivesGunpowder = (explosives*50)
+        let explosivesFrags = (explosives*10)
+
         let raidCost = {
-            sulphur: sulphur,
-            pipes: pipes,
-            gunpowder: gunpowder,
-            explosives: explosives
+            rocketSulphur: rocketSulphur,
+            rocketPipes: rocketPipes,
+            rocketGunpowder: rocketGunpowder,
+            rocketExplosives: rocketExplosives,
+            explosivesSulphur: explosivesSulphur,
+            explosivesLowGrade: explosivesLowGrade,
+            explosivesGunpowder: explosivesGunpowder,
+            explosivesFrags: explosivesFrags
         }
         onFormSubmit(raidCost)
     }
-
 
     return (
         <div id='searchBar'>
