@@ -43,7 +43,7 @@ export default function RaidCalcForm( { onFormSubmit }) {
 
     return (
         <div id='searchBar'>
-            <img width={60} height={60} src={require('../images/ammo.rocket.basic.png')} alt="rocket ammo icon"/>
+            <img width={120} height={120} src={require('../images/ammo.rocket.basic.png')} alt="rocket ammo icon"/>
             <form autoComplete="off" name="searchForm" id="searchBarForm" onSubmit={FormSubmit}>
             <input type="text" onChange={handleValueChange} id="searchName" placeholder="Enter rockets here..." />
             </form>

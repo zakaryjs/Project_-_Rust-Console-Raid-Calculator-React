@@ -4,6 +4,10 @@ img {
 
 input {
     text-align: center;
+    font-size: 22px;
+    color: white;
+    background: transparent;
+    border-width: 0;
 }
 
 input::placeholder {
