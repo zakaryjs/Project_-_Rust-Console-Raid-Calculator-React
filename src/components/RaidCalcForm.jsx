@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import '../styles/RaidCalcForm.css'
 
 export default function RaidCalcForm( { onFormSubmit }) {
     const [rocketQuery, setRocketQuery] = useState(0)
@@ -9,7 +9,7 @@ export default function RaidCalcForm( { onFormSubmit }) {
         onFormSubmit(rocketQuery)
         console.log(`Calculating the raid cost for ${rocketQuery} rockets...`)
         calculateRocket(rocketQuery)
-
+        event.target.reset()
     }
 
     let handleValueChange = (event) => {
@@ -21,10 +21,6 @@ export default function RaidCalcForm( { onFormSubmit }) {
         let pipes = (rocketValue*2)
         let gunpowder = (rocketValue*150)
         let explosives = (rocketValue*10)
-        console.log(`The sulphur cost for ${rocketValue} rockets is ${sulphur} sulphur.`)
-        console.log(`The pipe cost for ${rocketValue} rockets is ${pipes} pipes.`)
-        console.log(`The gunpowder cost for ${rocketValue} rockets is ${gunpowder} gunpowder.`)
-        console.log(`The explosives cost for ${rocketValue} rockets is ${explosives} explosives.`)
         let raidCost = {
             sulphur: sulphur,
             pipes: pipes,
@@ -32,13 +28,13 @@ export default function RaidCalcForm( { onFormSubmit }) {
             explosives: explosives
         }
         onFormSubmit(raidCost)
-        return sulphur, pipes, gunpowder, explosives
     }
 
 
     return (
         <div id='searchBar'>
-            <form name="searchForm" id="searchBarForm" onSubmit={FormSubmit}>
+            <img width={60} height={60} src={require('../images/ammo.rocket.basic.png')} alt="rocket ammo icon"/>
+            <form autoComplete="off" name="searchForm" id="searchBarForm" onSubmit={FormSubmit}>
             <input type="text" onChange={handleValueChange} id="searchName" placeholder="Enter rockets here..." />
             </form>
         </div>    

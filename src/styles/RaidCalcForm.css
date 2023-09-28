@@ -1,0 +1,11 @@
+img {
+    margin-bottom: 15px;
+}
+
+input {
+    text-align: center;
+}
+
+input::placeholder {
+    text-align: center;
+}
