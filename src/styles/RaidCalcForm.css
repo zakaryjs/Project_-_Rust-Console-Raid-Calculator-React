@@ -1,13 +1,22 @@
 img {
-    margin-bottom: 15px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 1em;
 }
 
 input {
+    /* display: block; */
     text-align: center;
     font-size: 22px;
     color: white;
     background: transparent;
     border-width: 0;
+    height: 50px;
+    margin-top: 40px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
 }
 
 input::placeholder {
