@@ -1,7 +1,7 @@
 import { useState } from "react";
-import '../styles/RaidCalcForm.css'
+import '../styles/RocketCalcForm.css'
 
-export default function RaidCalcForm( { onFormSubmit }) {
+export default function RocketCalcForm( { onFormSubmit }) {
     const [rocketQuery, setRocketQuery] = useState(0)
 
     async function FormSubmit(event) {
@@ -43,6 +43,7 @@ export default function RaidCalcForm( { onFormSubmit }) {
 
     return (
         <div id='searchBar'>
+            <h2>Rocket Calculator</h2>
             <form autoComplete="off" name="searchForm" id="searchBarForm" onSubmit={FormSubmit}>
                 <div>
                 <img width={65} height={65} src={require('../images/ammo.rocket.basic.png')} alt="rocket ammo icon" />
